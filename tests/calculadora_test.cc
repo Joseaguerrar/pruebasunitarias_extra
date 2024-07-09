@@ -19,3 +19,20 @@ TEST(CalculadoraTest,resta){
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 2);
 }
+
+TEST(CalculadoraTest,multiplicacion){
+    Calculadora calculadora("5*3");
+    EXPECT_TRUE(calculadora.IsValid());
+    EXPECT_EQ(calculadora.Resultado(), 15);
+}
+
+TEST(CalculadoraTest,divisionNormal){
+    Calculadora calculadora("10/2");
+    EXPECT_TRUE(calculadora.IsValid());
+    EXPECT_EQ(calculadora.Resultado(), 5);
+}
+TEST(CalculadoraTest,divisionPorCero){
+    Calculadora calculadora("5/0");
+    EXPECT_TRUE(calculadora.IsValid());
+    EXPECT_EQ(calculadora.Resultado(), 0);
+}
