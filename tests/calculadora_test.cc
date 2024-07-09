@@ -7,3 +7,15 @@ TEST(CalculadoraTest, EmptyExpression) {
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 0);
 }
+
+TEST(CalculadoraTest,suma){
+    Calculadora calculadora("5+3");
+    EXPECT_TRUE(calculadora.IsValid());
+    EXPECT_EQ(calculadora.Resultado(), 8);
+}
+
+TEST(CalculadoraTest,resta){
+    Calculadora calculadora("5-3");
+    EXPECT_TRUE(calculadora.IsValid());
+    EXPECT_EQ(calculadora.Resultado(), 2);
+}
