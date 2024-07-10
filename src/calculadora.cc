@@ -13,7 +13,7 @@ bool ask_user(std::istream& in, std::ostream& out) {
     std::transform(expresion.begin(), expresion.end(), expresion.begin(),
                    ::tolower);
 
-    if (expresion == "exit") {
+    if (expresion == "salir") {
         out << "Saliendo..." << std::endl;
         return false;
     }
