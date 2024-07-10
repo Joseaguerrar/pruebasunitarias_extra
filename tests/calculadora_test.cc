@@ -8,30 +8,30 @@ TEST(CalculadoraTest, EmptyExpression) {
     EXPECT_EQ(calculadora.Resultado(), 0);
 }
 
-TEST(CalculadoraTest,suma){
+TEST(CalculadoraTest, suma) {
     Calculadora calculadora("5+3");
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 8);
 }
 
-TEST(CalculadoraTest,resta){
+TEST(CalculadoraTest, resta) {
     Calculadora calculadora("5-3");
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 2);
 }
 
-TEST(CalculadoraTest,multiplicacion){
+TEST(CalculadoraTest, multiplicacion) {
     Calculadora calculadora("5*3");
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 15);
 }
 
-TEST(CalculadoraTest,divisionNormal){
+TEST(CalculadoraTest, divisionNormal) {
     Calculadora calculadora("10/2");
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 5);
 }
-TEST(CalculadoraTest,divisionPorCero){
+TEST(CalculadoraTest, divisionPorCero) {
     Calculadora calculadora("5/0");
     EXPECT_TRUE(calculadora.IsValid());
     EXPECT_EQ(calculadora.Resultado(), 0);
