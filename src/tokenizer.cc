@@ -49,7 +49,8 @@ Token* Tokenizer::Next() {
         } else {
             if (decimal) {
                 multiplicador /= 10;
-                valor += (text_[position] - 0) * multiplicador;
+                //Cambio al 0 por un char '0', lo cual no da error en los decimales
+                valor = valor + (multiplicador * (text_[position] - '0'));
             } else {
                 valor = valor * 10 + (text_[position] - '0');
             }

@@ -4,6 +4,7 @@ set(TESTFILES
     calculadora_test.cc
     shunting_yard_test.cc
     tokenizer_test.cc
+    token_test.cc
 # Si agregan más archivos .cc en src/ entonces deben agregarlos acá. De lo contrario,
 # no serán compilados y no podrán ser usados en las pruebas.
 # El nombre de la variable empieza con el nombre del target en src/CMakeLists.txt

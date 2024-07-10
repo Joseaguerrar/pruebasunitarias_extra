@@ -23,13 +23,14 @@ bool TokenOperador::IsRightParenthesis() const { return operador_ == ')'; }
 
 int TokenOperador::GetPrecedence() const {
     switch (operador_) {
-        case '*':
-            return 0;
         case '+':
         case '-':
             return 1;
         case '/':
             return 2;
+        case '*':
+            //La precedencia de la multiplicacion estaba como 0, lo cual no es correcto
+            return 3;
         default:
             return 0;
     }
