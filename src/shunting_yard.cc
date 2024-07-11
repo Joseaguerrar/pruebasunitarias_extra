@@ -40,7 +40,8 @@ std::queue<Token*> ShuntingYard::ConvertirAPostfijo() {
     }
 
     while (!operatorStack.empty()) {
-        if (operatorStack.top()->IsRightParenthesis()) {
+        //Error IsRightParenthesis, se cambio para que se evaluara con el izquierdo
+        if (operatorStack.top()->IsLeftParenthesis()) {
             throw std::runtime_error("Problema con los paréntesis");
         }
         outputQueue.push(operatorStack.top());

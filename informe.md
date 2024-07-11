@@ -9,15 +9,15 @@ Para subir el coverage, lo que hicimos fue basicamente revisar los archivos .htm
 iii. Qué errores encontraron en el programa y con qué prueba lograron 
 detectarlo. 
 
-Clase Token: En esta clase, el error que se encontró fue acerca de la precedencia de los operadores, donde la multiplicación tenia una precedencia de 0, igual que el caso por default, lo cual no deberia ser correcto, ya que este operadoir debería tener una precedencia mayor que a la suma y la resta que tenían una precedencia de 1. La prueba con la que detectamos el error, fue en una prueba donde se veía la precedencia de la multiplicación, la cual se notaba que la precedencia de dicho operador estaba mal, ya que el de la suma y resta debía ser menor y más bien era mayor.
+Clase Token: En esta clase, el error que se encontró fue acerca de la precedencia de los operadores, donde la multiplicación tenia una precedencia de 0, igual que el caso por default, lo cual no deberia ser correcto, ya que este operador debería tener una precedencia mayor que a la suma y la resta que tenían una precedencia de 1. La prueba con la que detectamos el error, fue en una prueba donde se veía la precedencia de la multiplicación, la cual se notaba que la precedencia de dicho operador estaba mal, ya que el de la suma y resta debía ser menor y más bien era mayor.
 
 Clase Tokenizer: En esta clase, el error encontrado fue sobre el manejo de los decimales, los cuales al poner un decimal por ejemplo "0.0", este se transformaba a "4.8", lo cual no era correcto, haciendo una prueba unitaria que comparaba este decimal y esperaba este mismo numero como resultado, saltó un error donde el valor que se dió fue el 4.8 y no el 0.0. De esta manera, se encontró que el error se derivaba de un error en la línea 53, donde en vez de un char '0', había un 0 como si fuera un entero común.
 
-Clase ShuntingYard:
+Clase ShuntingYard: En esta clase, el error se daba por como evaluaba el error del paréntesis derecho faltante. La prueba unitaria con la que se vió el error fue haciendo que evaluara el error del paréntesis derecho faltante, lo cual daba error y no pasaba dicha prueba.
 
-Clase Postfijo: En esta clase el error estaba a la hora de evaluar la expresión de resta ya que no se estaban restando, se estaban sumando. se le hizo una prueba unitaria y se arregló
+Clase Postfijo: En esta clase el error estaba a la hora de evaluar la expresión de resta ya que no se estaban restando, se estaban sumando. se le hizo una prueba unitaria y se arregló.
 
-Clase Calculadora:En esta clase el error estaba en la palabra exit ya que cuando uno ponía salir, no salía. se le hizo una prueba unitaria y se detectó
+Clase Calculadora:En esta clase el error estaba en la palabra exit ya que cuando uno ponía salir, no salía. se le hizo una prueba unitaria y se detectó.
 
 iv. Los puntos extra que hayan completado
 
