@@ -1,6 +1,6 @@
 #include <postfijo.hh>
 #include <stack>
-
+using namespace std;
 /*
 class Postfijo {
 private:
@@ -54,12 +54,14 @@ void Postfijo::Evaluar() {
                     res = op1 + op2;
                     break;
                 case '-':
+                //El error estaba en el signo, era más y es menos
                     res = op1 - op2;
                     break;
                 case '*':
                     res = op1 * op2;
                     break;
                 case '/':
+                //El error era que tenía que ser op2 no op1
                     if (op2 == 0) {
                         error = "Error: división por cero";
                         valid = false;

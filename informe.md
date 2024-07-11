@@ -15,8 +15,10 @@ Clase Tokenizer: En esta clase, el error encontrado fue sobre el manejo de los d
 
 Clase ShuntingYard:
 
-Clase Postfijo:
+Clase Postfijo: En esta clase el error estaba a la hora de evaluar la expresión de resta ya que no se estaban restando, se estaban sumando. se le hizo una prueba unitaria y se arregló
 
-Clase Calculadora:
+Clase Calculadora:En esta clase el error estaba en la palabra exit ya que cuando uno ponía salir, no salía. se le hizo una prueba unitaria y se detectó
 
 iv. Los puntos extra que hayan completado
+
+1.Hay un error en la parte de la calculadora cuando se divide entre 0 ya que no tira error, tira que el resultado es 0, si en la parte de postfijo se cambia el valor a 1 da infinito que sería el error esperado. No se le pudieron hacer pruebas pero está el error.
